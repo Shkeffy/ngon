@@ -1,4 +1,4 @@
-2-d physics rogue-lite platformer shooter
+2-d physics rogue-lite platformer shooter.
 
 https://shkeffy.github.io/sidescroller/
 
