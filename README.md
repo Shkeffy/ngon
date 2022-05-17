@@ -1,5 +1,8 @@
-2-d physics rogue-lite platformer shooter.
+# https://shkeffy.github.io/ngon/
+## 2-d physics rogue-lite platformer shooter.
 
-https://shkeffy.github.io/ngon/
+*This was originally owned by @landgreen, so credits to him.*
+I will be making my own updates on this code. If I like it enough, I'll send a commit on https://github.com/Shkeffy/n-gon.
 
-Website in progress.
+TO DO:
+
