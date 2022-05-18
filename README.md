@@ -1,5 +1,5 @@
 - TO DOWNLOAD (WORKS OFFLINE): Still in progress...
-- NORMAL WEBSITE (WORKS OFFLINE): https://shkeffy.github.io/ngon/
+- NORMAL WEBSITE: https://shkeffy.github.io/ngon/
 - NORMAL WEBSITE (WORKS OFFLINE): https://www.ngon.cf
 - NORMAL WEBSITE (WORKS OFFLINE): https://ngon.shkeffy.repl.co
 - (Landgreen's: https://landgreen.github.io/sidescroller/index.html)
