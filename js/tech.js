@@ -8733,7 +8733,7 @@ const tech = {
         },
         {
             name: "score",
-            description: "Add a score to n-gon!",
+            description: "Add a score to N-GON!",
             maxCount: 1,
             count: 0,
             frequency: 0,
@@ -8751,7 +8751,7 @@ const tech = {
         },
         {
             name: "pop-ups",
-            description: "sign up to learn endless easy ways to win n-gon<br>that Landgreen doesn't want you to know!!!1!!",
+            description: "sign up to learn endless easy ways to win N-GON<br>that Landgreen doesn't want you to know!!!1!!",
             maxCount: 1,
             count: 0,
             frequency: 0,
@@ -8768,7 +8768,7 @@ const tech = {
         },
         {
             name: "music",
-            description: "add music to n-gon",
+            description: "add music to N-GON",
             maxCount: 1,
             count: 0,
             frequency: 0,
@@ -8783,7 +8783,7 @@ const tech = {
         },
         {
             name: "performance",
-            description: "display performance stats to n-gon",
+            description: "display performance stats to N-GON",
             maxCount: 1,
             count: 0,
             frequency: 0,
@@ -9586,7 +9586,7 @@ const tech = {
         },
         {
             name: "planetesimals",
-            description: `play <strong>planetesimals</strong> <em style = 'font-size:80%;'>(an asteroids-like game)</em><br>clear <strong>levels</strong> in <strong>planetesimals</strong> to spawn <strong class='color-m'>tech</strong><br>if you <strong style="color:red;">die</strong> in <strong>planetesimals</strong> you <strong style="color:red;">die</strong> in <strong>n-gon</strong>`,
+            description: `play <strong>planetesimals</strong> <em style = 'font-size:80%;'>(an asteroids-like game)</em><br>clear <strong>levels</strong> in <strong>planetesimals</strong> to spawn <strong class='color-m'>tech</strong><br>if you <strong style="color:red;">die</strong> in <strong>planetesimals</strong> you <strong style="color:red;">die</strong> in <strong>N-GON</strong>`,
             maxCount: 1,
             count: 0,
             frequency: 0,
@@ -9610,7 +9610,7 @@ const tech = {
                         bc.close(); //end session
                     }
                     if (ev.data === 'ready' && !bc.activated) {
-                        bc.activated = true //prevents n-gon from activating multiple copies of planetesimals
+                        bc.activated = true //prevents N-GON from activating multiple copies of planetesimals
                         bc.postMessage("activate");
                     }
                 }
