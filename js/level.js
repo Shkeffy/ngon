@@ -10,7 +10,7 @@ const level = {
     //see level.populateLevels:   (intro, ... , reservoir, reactor, ... , gauntlet, final)    added later
     playableLevels: ["labs", "rooftops", "skyscrapers", "warehouse", "highrise", "office", "aerie", "satellite", "sewers", "testChamber", "pavilion"],
     // playableLevels: ["pavilion", "pavilion", "pavilion", "pavilion", "pavilion", "pavilion", "pavilion", "pavilion", "pavilion", "pavilion", "pavilion"],
-    communityLevels: ["stronghold", "basement", "crossfire", "vats", "run", "n-gon", "house", "perplex", "coliseum", "tunnel", "islands", "temple"],
+    communityLevels: ["stronghold", "basement", "crossfire", "vats", "run", "N-GON", "house", "perplex", "coliseum", "tunnel", "islands", "temple"],
     trainingLevels: ["walk", "crouch", "jump", "hold", "throw", "throwAt", "deflect", "heal", "fire", "nailGun", "shotGun", "superBall", "matterWave", "missile", "stack", "mine", "grenades", "harpoon"],
     levels: [],
     start() {
@@ -178,9 +178,9 @@ const level = {
     levelAnnounce() {
         const difficulty = simulation.isCheating ? "testing" : level.difficultyText()
         if (level.levelsCleared === 0) {
-            document.title = "n-gon: (" + difficulty + ")";
+            document.title = "N-GON: (" + difficulty + ")";
         } else {
-            document.title = `n-gon: ${level.levelsCleared} ${level.levels[level.onLevel]} (${difficulty})`
+            document.title = `N-GON: ${level.levelsCleared} ${level.levels[level.onLevel]} (${difficulty})`
             simulation.makeTextLog(`<span class='color-var'>level</span>.onLevel <span class='color-symbol'>=</span> "<span class='color-text'>${level.levels[level.onLevel]}</span>"`);
         }
         // simulation.makeTextLog(`
@@ -7844,8 +7844,8 @@ const level = {
             portal2[2].draw()
         }
     },
-    "n-gon"() { //make by Oranger
-        simulation.makeTextLog(`<strong>"n-gon"</strong> by <span class='color-var'>Oranger</span>`);
+    "N-GON"() { //make by Oranger
+        simulation.makeTextLog(`<strong>"N-GON"</strong> by <span class='color-var'>Oranger</span>`);
 
         document.body.style.backgroundColor = "#dcdcde";
         let needGravity = [];
@@ -8450,7 +8450,7 @@ const level = {
                     ctx.textAlign = "center";
                     ctx.fillStyle = "#00ffff" + Math.floor((secretAnimTrans - 40) * 12.75).toString(16);
                     ctx.font = "30px monospace";
-                    ctx.fillText("n-gon inc", 3300, -3630);
+                    ctx.fillText("N-GON inc", 3300, -3630);
 
                     ctx.font = "25px Arial";
                 }
@@ -8476,7 +8476,7 @@ const level = {
                     ctx.textAlign = "center";
                     ctx.fillStyle = "#00ffff" + Math.floor((secretAnimTrans2 - 40) * 12.75).toString(16);
                     ctx.font = "30px monospace";
-                    ctx.fillText("n-gon inc", 1950, -3630);
+                    ctx.fillText("N-GON inc", 1950, -3630);
 
                     ctx.font = "25px Arial";
                     if (secretAnimTrans2 >= 60) {
