@@ -1,4 +1,4 @@
-- TO DOWNLOAD (WORKS OFFLINE): 
+- TO DOWNLOAD (WORKS OFFLINE): Still in progress...
 - NORMAL WEBSITE (WORKS OFFLINE): https://shkeffy.github.io/ngon/
 - NORMAL WEBSITE (WORKS OFFLINE): https://www.ngon.cf
 - NORMAL WEBSITE (WORKS OFFLINE): https://ngon.shkeffy.repl.co
@@ -12,8 +12,9 @@ I will be making my own updates on this code. If I like it enough, I'll send a c
 - ~~Fix the favicon.ico~~
 - ~~Own domain~~
 - ~~Multiple links~~
+- ~~Offline mode~~
 - Light Mode, Dark Mode.
-- ~~PWA.~~
+- PWA. - Being worked on now.
 - Actual levels.
 - Multiplayer
 - More coming soon...
