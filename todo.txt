@@ -220,7 +220,7 @@ tech: spontaneous collapse - very low chance of something to occur
 
 bug? cloaking field doesn't show energy over max
 
-run more profiles of n-gon to fix performance issues
+run more profiles of N-GON to fix performance issues
 
 reactor
   life-like cellular automata boss
@@ -406,10 +406,10 @@ tech rocket jump - jumping produces an explosion at your feet that lets you jump
 Plasma Burner: upgrade for plasma torch, basically just a jet engine. does high damage, but short range, mostly for player movement.
   maybe reduce gravity to really low then apply a vector away from mouse direction
 
-auto-gon - auto battler with n-gon mob AI and tech
-  you build a group of mobs and bosses from n-gon
+auto-gon - auto battler with N-GON mob AI and tech
+  you build a group of mobs and bosses from N-GON
     they fight other mobs and bosses
-  similar research and tech system to n-gon
+  similar research and tech system to N-GON
   some mobs can fire player weapons
 
 harpoon grappling hook - basic effect is working, but needs work before it becomes fun
@@ -425,7 +425,7 @@ adapt the cloaking graphics to make a flashlight cone visual effect
 
 be nice if block throwing had a projected path
 
-JUNK tech: planetesimals game inside n-gon
+JUNK tech: planetesimals game inside N-GON
 https://codepen.io/lilgreenland/pen/jrMvaB?editors=0010
 
 Pilot wave tech
@@ -564,7 +564,7 @@ look for tech that could update description text with count and tech is informat
   can only use variables that change in effect() and remove()
   this.description = `<strong>8%</strong> chance to <strong>duplicate</strong> spawned <strong>power ups</strong><br><em>chance to duplicate = ${techduplicateChance}</em>`
 
-use mac automator to speed up your n-gon -> git sync
+use mac automator to speed up your N-GON -> git sync
 
 movement fluidity
   let legs jump on mobs, but player will still take damage
@@ -588,7 +588,7 @@ css transition for pause menu
 
 animate new level spawn by having the map aspects randomly fly into place
     
-n-gon outreach ideas
+N-GON outreach ideas
   blips - errant signal on youtube
   reddit - r/IndieGaming
   hacker news - show hacker news post
@@ -945,6 +945,11 @@ add sounds
     // tone(396)
     // tone(445.50)
     // tone(495)
+
+
+
+
+
 
 
 
