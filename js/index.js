@@ -85,7 +85,7 @@ const color = { //light
 // check for URL parameters to load an experimental game
 //**********************************************************************
 
-//example  https://landgreen.github.io/sidescroller/index.html?
+//example  https://www.ngon.cf/index.html?
 //          &gun1=minigun&gun2=laser
 //          &tech1=laser-bot&tech2=mass%20driver&tech3=overcharge&tech4=laser-bot&tech5=laser-bot&field=phase%20decoherence%20field&difficulty=2
 //add ? to end of url then for each power up add
@@ -549,7 +549,7 @@ ${simulation.isCheating ? "<br><br><em>lore disabled</em>": ""}
         document.getElementById("experiment-grid").style.display = "grid"
     },
     shareURL(isCustom = false) {
-        let url = "https://landgreen.github.io/sidescroller/index.html?"
+        let url = "https://www.ngon.cf/index.html?"
         url += `&seed=${Math.initialSeed}`
         let count = 0;
         for (let i = 0; i < b.inventory.length; i++) {
