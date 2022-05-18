@@ -572,16 +572,16 @@ ${simulation.isCheating ? "<br><br><em>lore disabled</em>": ""}
         if (isCustom) {
             url += `&level=${Math.abs(Number(document.getElementById("starting-level").value))}`
             url += `&noPower=${Number(document.getElementById("no-power-ups").checked)}`
-            // alert('n-gon build URL copied to clipboard.\nPaste into browser address bar.')
+            // alert('N-GON build URL copied to clipboard.\nPaste into browser address bar.')
         } else {
-            simulation.makeTextLog("n-gon build URL copied to clipboard.<br>Paste into browser address bar.")
+            simulation.makeTextLog("N-GON build URL copied to clipboard.<br>Paste into browser address bar.")
         }
-        console.log('n-gon build URL copied to clipboard.\nPaste into browser address bar.')
+        console.log('N-GON build URL copied to clipboard.\nPaste into browser address bar.')
         console.log(url)
         navigator.clipboard.writeText(url).then(function() {
             /* clipboard successfully set */
             if (isCustom) {
-                setTimeout(function() { alert('n-gon build URL copied to clipboard.\nPaste into browser address bar.') }, 300);
+                setTimeout(function() { alert('N-GON build URL copied to clipboard.\nPaste into browser address bar.') }, 300);
             }
         }, function() {
             /* clipboard write failed */
@@ -1314,11 +1314,11 @@ document.getElementById("updates").addEventListener("toggle", function() {
         xhr.open("GET", path, true);
         xhr.send();
     }
-    let text = `<strong>n-gon</strong>: <a href="https://github.com/landgreen/n-gon/blob/master/todo.txt">todo list</a> and complete <a href="https://github.com/landgreen/n-gon/commits/master">change-log</a><hr>`
+    let text = `<strong>N-GON</strong>: <a href="https://github.com/Shkeffy/ngon/blob/master/todo.txt">todo list</a> and complete <a href="https://github.com/shkeffy/ngon/commits/master">change-log</a><hr>`
     document.getElementById("updates-div").innerHTML = text
 
-    ///  https://api.github.com/repos/landgreen/n-gon/stats/commit_activity
-    loadJSON('https://api.github.com/repos/landgreen/n-gon/commits',
+    ///  https://api.github.com/repos/Shkeffy/ngon/stats/commit_activity
+    loadJSON('https://api.github.com/repos/Shkeffy/ngon/commits',
         function(data) {
             // console.log(data)
             for (let i = 0, len = 20; i < len; i++) {
