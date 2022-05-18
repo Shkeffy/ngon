@@ -13,8 +13,10 @@ I will be making my own updates on this code. If I like it enough, I'll send a c
 - ~~Own domain~~
 - ~~Multiple links~~
 - ~~Offline mode~~
+- Mobile Controls - BEING WORKED ON RIGHT NOW
+- PWA.
+- Putting it out on the web store.
 - Light Mode, Dark Mode.
-- PWA. - Being worked on now.
 - Actual levels.
 - Multiplayer
 - More coming soon...
