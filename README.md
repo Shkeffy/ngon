@@ -1,8 +1,9 @@
 ## 2-d physics rogue-lite platformer shooter.
 ###### *This was originally created by @landgreen, so credits to him.*
-I will be making my own updates on this code. If I like it enough, I'll send a commit on https://github.com/Shkeffy/n-gon.
+##### I will be making my own updates on this code. 
+##### If I like it enough, I'll send a commit on https://github.com/Shkeffy/n-gon.
 
-<p align="center">
+<p align="middle">
 <img src="https://img.shields.io/github/stars/Shkeffy/ngon?style=for-the-badge&logo=appveyor">
 <img src="https://img.shields.io/github/forks/Shkeffy/ngon?style=for-the-badge&logo=appveyor">
 <img src="https://img.shields.io/github/license/Shkeffy/ngon?style=for-the-badge&logo=appveyor">
