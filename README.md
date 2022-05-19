@@ -9,6 +9,10 @@
 </p>
 
 ## Read the Wiki for more information: https://github.com/Shkeffy/ngon/wiki
+Please star and watch this repo!
+<br>Fork and commit if you'd like to help out, I need all the help I can get!
+<br>I would love for people to acknowledge this repo, as it's my first!
+<br>Thank you!
 
 ### I *am* looking for help with N-GON. Contact me for more details
 - Discord - Shkeffy#9999 (Not online often).
