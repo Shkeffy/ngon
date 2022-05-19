@@ -14,8 +14,8 @@
 - Discord - Shkeffy#9999 (Not online often)
 - Email: xshknevsx@gmail.com (Checked every three hours)
 - Open an issue (Ping me)
-- Start a discussion (Ping me)
-You need:
+- Start a discussion (Ping me)<br>
+#### You need:
 - Experience
 - Proof of work (One or more of the below)
   - A project you've made
