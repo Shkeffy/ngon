@@ -1,1 +1,0 @@
-CoderMuffin - Helped with serviceworker.
