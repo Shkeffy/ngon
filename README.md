@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="http://www.ngon.cf/" target="blank"><img src="https://i.imgur.com/xM2gDVX.png" width="120" alt="N-GON" /></a>
+</p>
+
 ## 2-d physics rogue-lite platformer shooter.
 ##### I will be making my own updates on this code.
 
