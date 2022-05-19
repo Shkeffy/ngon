@@ -17,7 +17,7 @@ const urlsToCache = [
     '/lib/decomp.min.js',
     '/lib/matter.min.js',
     '/lib/randomColor.min.js',
-    '/favicon1.ico',
+    '/favicon.ico',
     '/style.css'
 ];
 

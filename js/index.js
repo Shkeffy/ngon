@@ -233,30 +233,30 @@ const build = {
         if (tech.missileBotCount) botText += `<br>missile-bots: ${tech.missileBotCount}`
 
         let text = `<div class="pause-grid-module" style = "font-size: 13px;line-height: 120%;padding: 5px;">`
-        if (!simulation.isChoosing) text += `<br><span style="font-size:1.5em;font-weight: 600;">PAUSED</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; press P to resume
+        if (!simulation.isChoosing) text += `<br><span style="font-size:1.5em;font-weight: 600;">PAUSED</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Press P To Resume
 <br><br><svg class="SVG-button" onclick="build.shareURL(false)" width="92" height="20" style="padding:0px; margin: 1px;">
-    <g stroke='none' fill='#333' stroke-width="2" font-size="14px" font-family="Ariel, sans-serif"> <text x="5" y="15">copy build url</text></g>
+    <g stroke='none' fill='#333' stroke-width="2" font-size="14px" font-family="Ariel, sans-serif"> <text x="5" y="15">Copy Build Url</text></g>
 </svg><br>`
         text += `
-<br>effective <strong class='color-d'>damage</strong>: ${(tech.damageFromTech() * m.dmgScale).toPrecision(4)}
-<br>damage: ${((tech.damageFromTech())).toPrecision(4)}, difficulty: ${((m.dmgScale)).toPrecision(4)}
+<br>Effective <strong class='color-d'>Damage</strong>: ${(tech.damageFromTech() * m.dmgScale).toPrecision(4)}
+<br>Damage: ${((tech.damageFromTech())).toPrecision(4)}, Difficulty: ${((m.dmgScale)).toPrecision(4)}
 <br>
-<br>effective <strong class='color-harm'>harm</strong>: ${(simulation.dmgScale*m.harmReduction()).toPrecision(4)}
-<br>reduction: ${(m.harmReduction()).toPrecision(4)}, difficulty: ${(simulation.dmgScale).toPrecision(4)}
+<br>Effective <strong class='color-harm'>Harm</strong>: ${(simulation.dmgScale*m.harmReduction()).toPrecision(4)}
+<br>Reduction: ${(m.harmReduction()).toPrecision(4)}, Difficulty: ${(simulation.dmgScale).toPrecision(4)}
 <br>
 ${botText}
-<br><strong class='color-h'>health</strong>: (${(m.health*100).toFixed(0)} / ${(m.maxHealth*100).toFixed(0)}) &nbsp; <strong class='color-f'>energy</strong>: (${(m.energy*100).toFixed(0)} / ${(m.maxEnergy*100).toFixed(0)})
-<br><strong class='color-g'>gun</strong>: ${b.activeGun === null || b.activeGun === undefined ? "undefined":b.guns[b.activeGun].name} &nbsp; <strong class='color-g'>ammo</strong>: ${b.activeGun === null || b.activeGun === undefined ? "0":b.guns[b.activeGun].ammo}
-<br><strong><em>fire delay</em></strong> decrease: ${((1-b.fireCDscale)*100).toFixed(b.fireCDscale < 0.1 ? 2 : 0)}%
-<br><strong class='color-dup'>duplication</strong> chance: ${(tech.duplicationChance()*100).toFixed(0)}%
-<br><strong class='color-m'>tech</strong>: ${tech.totalCount}  &nbsp; <strong class='color-r'>research</strong>: ${powerUps.research.count}  
-<br>position: (${player.position.x.toFixed(1)}, ${player.position.y.toFixed(1)}) &nbsp; velocity: (${player.velocity.x.toFixed(1)}, ${player.velocity.y.toFixed(1)})
-<br>mouse: (${simulation.mouseInGame.x.toFixed(1)}, ${simulation.mouseInGame.y.toFixed(1)}) &nbsp; mass: ${player.mass.toFixed(1)}      
+<br><strong class='color-h'>Health</strong>: (${(m.health*100).toFixed(0)} / ${(m.maxHealth*100).toFixed(0)}) &nbsp; <strong class='color-f'>Energy</strong>: (${(m.energy*100).toFixed(0)} / ${(m.maxEnergy*100).toFixed(0)})
+<br><strong class='color-g'>Gun</strong>: ${b.activeGun === null || b.activeGun === undefined ? "Undefined":b.guns[b.activeGun].name} &nbsp; <strong class='color-g'>Ammo</strong>: ${b.activeGun === null || b.activeGun === undefined ? "0":b.guns[b.activeGun].ammo}
+<br><strong><em>Fire Delay</em></strong> decrease: ${((1-b.fireCDscale)*100).toFixed(b.fireCDscale < 0.1 ? 2 : 0)}%
+<br><strong class='color-dup'>Duplication</strong> chance: ${(tech.duplicationChance()*100).toFixed(0)}%
+<br><strong class='color-m'>Tech</strong>: ${tech.totalCount}  &nbsp; <strong class='color-r'>Research</strong>: ${powerUps.research.count}  
+<br>Position: (${player.position.x.toFixed(1)}, ${player.position.y.toFixed(1)}) &nbsp; velocity: (${player.velocity.x.toFixed(1)}, ${player.velocity.y.toFixed(1)})
+<br>Mouse: (${simulation.mouseInGame.x.toFixed(1)}, ${simulation.mouseInGame.y.toFixed(1)}) &nbsp; mass: ${player.mass.toFixed(1)}      
 <br>
-<br>seed: ${Math.initialSeed}
-<br>level: ${level.levels[level.onLevel]} (${level.difficultyText()}) &nbsp; ${m.cycle} cycles
-<br>${mob.length} mobs, &nbsp; ${body.length} blocks, &nbsp; ${bullet.length} bullets, &nbsp; ${powerUp.length} power ups
-${simulation.isCheating ? "<br><br><em>lore disabled</em>": ""}
+<br>Seed: ${Math.initialSeed}
+<br>Level: ${level.levels[level.onLevel]} (${level.difficultyText()}) &nbsp; ${m.cycle} cycles
+<br>${mob.length} mobs, &nbsp; ${body.length} Blocks, &nbsp; ${bullet.length} Bullets, &nbsp; ${powerUp.length} Power ups
+${simulation.isCheating ? "<br><br><em>Lore Disabled</em>": ""}
 </div>`;
         for (let i = 0, len = b.inventory.length; i < len; i++) {
             text += `<div class="pause-grid-module"><div class="grid-title"><div class="circle-grid gun"></div> &nbsp; ${build.nameLink(b.guns[b.inventory[i]].name)} - <span style="font-size:100%;font-weight: 100;">${b.guns[b.inventory[i]].ammo}</span></div> ${b.guns[b.inventory[i]].description}</div>`
@@ -457,33 +457,33 @@ ${simulation.isCheating ? "<br><br><em>lore disabled</em>": ""}
   <div style="display: flex; justify-content: space-around; align-items: center;">
     <svg class="SVG-button" onclick="build.startExperiment()" width="115" height="51">
       <g stroke='none' fill='#333' stroke-width="2" font-size="40px" font-family="Ariel, sans-serif">
-        <text x="18" y="38">start</text>
+        <text x="18" y="38">Start</text>
       </g>
     </svg>
     <svg class="SVG-button" onclick="build.reset()" width="50" height="25">
       <g stroke='none' fill='#333' stroke-width="2" font-size="17px" font-family="Ariel, sans-serif">
-        <text x="5" y="18">reset</text>
+        <text x="5" y="18">Reset</text>
       </g>
     </svg>
     <svg class="SVG-button" onclick="build.shareURL(true)" width="52" height="25">
       <g stroke='none' fill='#333' stroke-width="2" font-size="17px" font-family="Ariel, sans-serif">
-        <text x="5" y="18">share</text>
+        <text x="5" y="18">Share</text>
       </g>
     </svg>
   </div>
   <div style="align-items: center; text-align:center; font-size: 1.00em; line-height: 190%;background-color:var(--build-bg-color);">
-    <div>starting level: <input id='starting-level' type="number" step="1" value="1" min="0" max="99"></div>
+    <div>Starting Level: <input id='starting-level' type="number" step="1" value="1" min="0" max="99"></div>
     <div>
-    <label for="difficulty-select" title="effects: number of mobs, damage done by mobs, damage done to mobs, mob speed, heal effects">difficulty:</label>
+    <label for="difficulty-select" title="effects: number of mobs, damage done by mobs, damage done to mobs, mob speed, heal effects">Difficulty:</label>
       <select name="difficulty-select" id="difficulty-select-experiment">
-        <option value="1">easy</option>
-        <option value="2" selected>normal</option>
-        <option value="4">hard</option>
-        <option value="6">why?</option>
+        <option value="1">Easy</option>
+        <option value="2" Selected>Normal</option>
+        <option value="4">Hard</option>
+        <option value="6">Why?</option>
       </select>
     </div>
     <div>
-      <label for="no-power-ups" title="no tech, fields, or guns will spawn">no power ups:</label>
+      <label for="no-power-ups" title="no tech, fields, or guns will spawn">No Power Ups:</label>
       <input type="checkbox" id="no-power-ups" name="no-power-ups" style="width:17px; height:17px;">
     </div>
   </div>`
@@ -586,9 +586,9 @@ ${simulation.isCheating ? "<br><br><em>lore disabled</em>": ""}
         }, function() {
             /* clipboard write failed */
             if (isCustom) {
-                setTimeout(function() { alert('copy failed') }, 300);
+                setTimeout(function() { alert('Copy Failed') }, 300);
             }
-            console.log('copy failed')
+            console.log('Copy Failed')
         });
 
     },
@@ -928,7 +928,7 @@ window.addEventListener("keydown", function(event) {
         case input.key.testing:
             if (m.alive && localSettings.loreCount > 0) {
                 if (simulation.difficultyMode > 4) {
-                    simulation.makeTextLog("<em>testing mode disabled for this difficulty</em>");
+                    simulation.makeTextLog("<em>Testing mode is disabled for this difficulty</em>");
                     break
                 }
                 if (simulation.testing) {
@@ -945,55 +945,55 @@ window.addEventListener("keydown", function(event) {
                         `<table class="pause-table">
                             <tr>
                                 <td class='key-input-pause'>T</td>
-                                <td class='key-used'><strong>toggle testing</strong></td>
+                                <td class='key-used'><strong>Toggle testing</strong></td>
                             </tr>
                             <tr>
                                 <td class='key-input-pause'>R</td>
-                                <td class='key-used'>teleport to mouse</td>
+                                <td class='key-used'>Teleport to mouse</td>
                             </tr>
                             <tr>
                                 <td class='key-input-pause'>F</td>
-                                <td class='key-used'>cycle field</td>
+                                <td class='key-used'>Cycle field</td>
                             </tr>
                             <tr>
                                 <td class='key-input-pause'>G</td>
-                                <td class='key-used'>all guns</td>
+                                <td class='key-used'>All guns</td>
                             </tr>                            
                             <tr>
                                 <td class='key-input-pause'>H</td>
-                                <td class='key-used'>harm immunity</td>
+                                <td class='key-used'>Harm immunity</td>
                             </tr>
                             <tr>
                                 <td class='key-input-pause'>B</td>
-                                <td class='key-used'>damage, research</td>
+                                <td class='key-used'>Damage, Research</td>
                             </tr>
                             <tr>
                                 <td class='key-input-pause'>N</td>
-                                <td class='key-used'>fill health, energy</td>
+                                <td class='key-used'>Fill Health, Energy</td>
                             </tr>
                             <tr>
                                 <td class='key-input-pause'>Y</td>
-                                <td class='key-used'>random tech</td>
+                                <td class='key-used'>Random Tech</td>
                             </tr>
                             <tr>
                                 <td class='key-input-pause'>U</td>
-                                <td class='key-used'>next level</td>
+                                <td class='key-used'>Next Level</td>
                             </tr>
                             <tr>
                                 <td class='key-input-pause'>J</td>
-                                <td class='key-used'>clear mobs</td>
+                                <td class='key-used'>Clear Mobs</td>
                             </tr>
                             <tr>
                                 <td class='key-input-pause'>I/O</td>
-                                <td class='key-used'>zoom in / out</td>
+                                <td class='key-used'>Zoom In / out</td>
                             </tr>
                             <tr>
                                 <td class='key-input-pause'>1-8</td>
-                                <td class='key-used'>spawn things</td>
+                                <td class='key-used'>Spawn Things</td>
                             </tr>
                             <tr>
                                 <td class='key-input-pause'>⇧X</td>
-                                <td class='key-used'>restart</td>
+                                <td class='key-used'>Restart</td>
                             </tr>    
                         </table>`, Infinity);
                 }
@@ -1314,7 +1314,7 @@ document.getElementById("updates").addEventListener("toggle", function() {
         xhr.open("GET", path, true);
         xhr.send();
     }
-    let text = `<strong>N-GON</strong>: <a href="https://github.com/Shkeffy/ngon/blob/master/todo.txt">todo list</a> and complete <a href="https://github.com/shkeffy/ngon/commits/master">change-log</a><hr>`
+    let text = `<strong>N-GON</strong>: <a href="https://github.com/Shkeffy/ngon/blob/master/todo.txt">Todo List</a><hr>`
     document.getElementById("updates-div").innerHTML = text
 
     ///  https://api.github.com/repos/Shkeffy/ngon/stats/commit_activity
