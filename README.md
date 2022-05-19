@@ -9,5 +9,5 @@
 </p>
 
 # Read the Wiki for more information: https://github.com/Shkeffy/ngon/wiki
-<br>
+
 ###### *This original code was created by @landgreen, so credits to him.*
