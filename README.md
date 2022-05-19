@@ -16,7 +16,7 @@
 - Open an issue (Ping me).
 - Start a discussion (Ping me).<br>
 #### You need:
-- Experience
+- Experience.
 - Proof of work (One or more of the below).
   - A project you've made.
   - A reference.
