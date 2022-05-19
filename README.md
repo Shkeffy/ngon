@@ -18,6 +18,10 @@
 **If on Windows:**
 - Search it up, I can't find it, if someone can, open an issue with the name `[WINDOWS]`.
 
+**If you want to run it on Replit**
+- Fork the code.
+- Run button: `run`.
+
 **LINKS**
 - [NORMAL WEBSITE:](https://shkeffy.github.io/ngon/)
 - [OFFLINE WEBSITE](https://www.ngon.cf)
