@@ -22,7 +22,7 @@
 - ~~Own domain~~
 - ~~Multiple links~~
 - ~~Offline mode~~
-- Mobile Controls - BEING WORKED ON RIGHT NOW
+- Mobile Controls
 - PWA.
 - Music
 - Putting it out on the web store.
