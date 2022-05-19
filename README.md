@@ -16,12 +16,14 @@
 - NORMAL WEBSITE (WORKS OFFLINE): https://ngon.shkeffy.repl.co
 - (Landgreen's: https://landgreen.github.io/sidescroller/index.html)
 
+If you can't see the new updates, then clear the cookies, and go to the website again.
 
 ## TO DO:
 - ~~Fix the favicon.ico~~
 - ~~Own domain~~
 - ~~Multiple links~~
 - ~~Offline mode~~
+- ~~New favicon~~
 - Mobile Controls
 - PWA.
 - Music
