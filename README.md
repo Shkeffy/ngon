@@ -11,16 +11,17 @@
 ## Read the Wiki for more information: https://github.com/Shkeffy/ngon/wiki
 
 ### I *am* looking for help with N-GON. Contact me for more details
-- Discord - Shkeffy#9999 (Not online often)
-- Email: xshknevsx@gmail.com (Checked every three hours)
-- Open an issue (Ping me)
-- Start a discussion (Ping me)<br>
+- Discord - Shkeffy#9999 (Not online often).
+- Email: xshknevsx@gmail.com (Checked every three hours).
+- Open an issue (Ping me).
+- Start a discussion (Ping me).<br>
 #### You need:
 - Experience
-- Proof of work (One or more of the below)
-  - A project you've made
-  - A reference
-  - Some code you can write
+- Proof of work (One or more of the below).
+  - A project you've made.
+  - A reference.
+  - Some code you can write.
+- Payment will be discussed.
 <br>Thank you!
 
 ###### *This original code was created by @landgreen, so credits to him.*
