@@ -8,41 +8,6 @@
 <img src="https://img.shields.io/github/downloads/Shkeffy/ngon/total?style=for-the-badge&logo=appveyor">
 </p>
 
-### TO DOWNLOAD (WORKS OFFLINE): Go to one of the 'OFFLINE WEBSITE' websites.
-**If on Chrome:**
-- Click on the `︙`, and move your cursor to `more tools`.
-- Click on `Create shortcut...`.
-- Now check `Open as window`, and press `Create`.
-- Now it should work offline.
-
-**If on Windows:**
-- Search it up, I can't find it, if someone can, open an issue with the name `[WINDOWS]`.
-
-**If you want to run it on Replit**
-- Fork the code.
-- Run button: `run`.
-
-**LINKS**
-- [NORMAL WEBSITE:](https://shkeffy.github.io/ngon/)
-- [OFFLINE WEBSITE](https://www.ngon.cf)
-- [OFFLINE WEBSITE](https://ngon.shkeffy.repl.co)
-- [Landgreen's](https://landgreen.github.io/sidescroller/index.html)
-
-If you can't see the new updates, then clear the cookies, and go to the website again.
-
-## TO DO:
-- ~~Fix the favicon.ico~~
-- ~~Own domain~~
-- ~~Multiple links~~
-- ~~Offline mode~~
-- ~~New favicon~~
-- Mobile Controls
-- PWA.
-- Music
-- Putting it out on the web store.
-- Light Mode, Dark Mode.
-- Actual levels.
-- Multiplayer
-- More coming soon...
-
+# Read the Wiki for more information: https://github.com/Shkeffy/ngon/wiki
+<br>
 ###### *This original code was created by @landgreen, so credits to him.*
