@@ -18,6 +18,13 @@ Please star and watch this repo!
 <br>I would love for people to acknowledge this repo, as it's my first!
 <br>Thank you!
 
+# Links:
+[OWW] = Offline Working Website
+- [NORMAL WEBSITE:](https://shkeffy.github.io/ngon/)
+- [OWW](https://www.ngon.cf)
+- [OWW](https://ngon.shkeffy.repl.co)
+- [Landgreen's](https://landgreen.github.io/sidescroller/index.html)
+
 ### I *am* looking for help with N-GON. Contact me for more details
 - Discord - Shkeffy#9999 (Not online often).
 - Email: xshknevsx@gmail.com (Checked every three hours).
