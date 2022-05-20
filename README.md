@@ -20,7 +20,7 @@ Please star and watch this repo!
 
 # Links:
 [OWW] = Offline Working Website
-- [NORMAL WEBSITE:](https://shkeffy.github.io/ngon/)
+- [NORMAL WEBSITE](https://shkeffy.github.io/ngon/)
 - [OWW](https://www.ngon.cf)
 - [OWW](https://ngon.shkeffy.repl.co)
 
