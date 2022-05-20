@@ -10,21 +10,21 @@ const level = {
     //see level.populateLevels:   (intro, ... , reservoir, reactor, ... , gauntlet, final)    added later
     playableLevels: ["labs", "rooftops", "skyscrapers", "warehouse", "highrise", "office", "aerie", "satellite", "sewers", "testChamber", "pavilion"],
     // playableLevels: ["pavilion", "pavilion", "pavilion", "pavilion", "pavilion", "pavilion", "pavilion", "pavilion", "pavilion", "pavilion", "pavilion"],
-    communityLevels: ["stronghold", "basement", "crossfire", "vats", "run", "N-GON", "house", "perplex", "coliseum", "tunnel", "islands", "temple"],
+    communityLevels: ["stronghold", "basement", "crossfire", "vats", "run", "n-gon", "house", "perplex", "coliseum", "tunnel", "islands", "temple"],
     trainingLevels: ["walk", "crouch", "jump", "hold", "throw", "throwAt", "deflect", "heal", "fire", "nailGun", "shotGun", "superBall", "matterWave", "missile", "stack", "mine", "grenades", "harpoon"],
     levels: [],
     start() {
         if (level.levelsCleared === 0) { //this code only runs on the first level
-            // simulation.isHorizontalFlipped = true
-            // m.setField("perfect diamagnetism")
-            // b.giveGuns("grenades")
-            // tech.giveTech("rule 30")
-            // tech.giveTech("cherenkov radiation")
+            // // simulation.isHorizontalFlipped = true
+            // m.setField("wormhole")
+            // b.giveGuns("matter wave")
+            // tech.giveTech("chain reaction")
+            // tech.giveTech("fireworks")
             // tech.giveTech("flame test")
             // tech.giveTech("pyrotechnics")
             // for (let i = 0; i < 10; i++) tech.giveTech("replication")
-            // tech.giveTech("decoherence")
-            // tech.giveTech("pneumatic actuator")
+            // tech.giveTech("acetone peroxide")
+            // for (let i = 0; i < 10; i++) tech.giveTech("ammonium nitrate")
             // for (let i = 0; i < 10; i++) powerUps.directSpawn(450, -50, "tech");
             // for (let i = 0; i < 10; i++) powerUps.directSpawn(450, -50, "research");
             // for (let i = 0; i < 15; i++) tech.giveTech()
@@ -178,9 +178,9 @@ const level = {
     levelAnnounce() {
         const difficulty = simulation.isCheating ? "testing" : level.difficultyText()
         if (level.levelsCleared === 0) {
-            document.title = "N-GON: (" + difficulty + ")";
+            document.title = "n-gon: (" + difficulty + ")";
         } else {
-            document.title = `N-GON: ${level.levelsCleared} ${level.levels[level.onLevel]} (${difficulty})`
+            document.title = `n-gon: ${level.levelsCleared} ${level.levels[level.onLevel]} (${difficulty})`
             simulation.makeTextLog(`<span class='color-var'>level</span>.onLevel <span class='color-symbol'>=</span> "<span class='color-text'>${level.levels[level.onLevel]}</span>"`);
         }
         // simulation.makeTextLog(`
@@ -2652,7 +2652,7 @@ const level = {
         // spawn.slashBoss(1900, -500)
         // spawn.launcherBoss(3200, -500)
         // spawn.laserTargetingBoss(1700, -500)
-        // spawn.powerUpBoss(1900, -500)
+        spawn.powerUpBoss(1900, -500)
         // spawn.powerUpBossBaby(3200, -500)
         // spawn.snakeBoss(1700, -500)
         // spawn.streamBoss(3200, -500)
@@ -2663,7 +2663,7 @@ const level = {
         // spawn.blinkBoss(1700, -500)
         // spawn.snakeSpitBoss(3200, -500)
         // spawn.laserBombingBoss(1700, -500)
-        spawn.launcherBoss(3200, -500)
+        // spawn.launcherBoss(3200, -500)
         // spawn.blockBoss(1700, -500)
         // spawn.blinkBoss(3200, -500)
         // spawn.spiderBoss(1700, -500)
@@ -7844,8 +7844,8 @@ const level = {
             portal2[2].draw()
         }
     },
-    "N-GON"() { //make by Oranger
-        simulation.makeTextLog(`<strong>"N-GON"</strong> by <span class='color-var'>Oranger</span>`);
+    "n-gon"() { //make by Oranger
+        simulation.makeTextLog(`<strong>"n-gon"</strong> by <span class='color-var'>Oranger</span>`);
 
         document.body.style.backgroundColor = "#dcdcde";
         let needGravity = [];
@@ -8450,7 +8450,7 @@ const level = {
                     ctx.textAlign = "center";
                     ctx.fillStyle = "#00ffff" + Math.floor((secretAnimTrans - 40) * 12.75).toString(16);
                     ctx.font = "30px monospace";
-                    ctx.fillText("N-GON inc", 3300, -3630);
+                    ctx.fillText("n-gon inc", 3300, -3630);
 
                     ctx.font = "25px Arial";
                 }
@@ -8476,7 +8476,7 @@ const level = {
                     ctx.textAlign = "center";
                     ctx.fillStyle = "#00ffff" + Math.floor((secretAnimTrans2 - 40) * 12.75).toString(16);
                     ctx.font = "30px monospace";
-                    ctx.fillText("N-GON inc", 1950, -3630);
+                    ctx.fillText("n-gon inc", 1950, -3630);
 
                     ctx.font = "25px Arial";
                     if (secretAnimTrans2 >= 60) {
