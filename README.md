@@ -23,7 +23,6 @@ Please star and watch this repo!
 - [NORMAL WEBSITE:](https://shkeffy.github.io/ngon/)
 - [OWW](https://www.ngon.cf)
 - [OWW](https://ngon.shkeffy.repl.co)
-- [Landgreen's](https://landgreen.github.io/sidescroller/index.html)
 
 ### I *am* looking for help with N-GON. Contact me for more details
 - Discord - Shkeffy#9999 (Not online often).
@@ -38,5 +37,3 @@ Please star and watch this repo!
   - Some code you can write.
 - Payment will be discussed.
 <br>Thank you!
-
-###### *This original code was created by @landgreen, so credits to him.*
