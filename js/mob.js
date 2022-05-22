@@ -232,7 +232,7 @@ const mobs = {
             cd: 0, //game cycle when cooldown will be over
             delay: 60, //static: time between cooldowns
             fill: color,
-            stroke: "#000",
+            stroke: themeColors.moboutlineColor,
             seePlayer: {
                 yes: false,
                 recall: 0,
