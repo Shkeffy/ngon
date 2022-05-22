@@ -3,6 +3,7 @@ const urlsToCache = [
     "/",
     '/index.html',
     '/js/bullet.js',
+    '/js/colors.js',
     '/js/engine.js',
     '/js/index.js',
     '/js/level.js',
@@ -18,7 +19,8 @@ const urlsToCache = [
     '/lib/matter.min.js',
     '/lib/randomColor.min.js',
     '/favicon.ico',
-    '/style.css'
+    '/style.css',
+    '/darkstyle.css'
 ];
 
 // Install the service worker and open the cache and add files mentioned in array to cache
