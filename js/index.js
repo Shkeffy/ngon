@@ -52,11 +52,11 @@ const cat = {
 }
 
 const color = { //light
-    background: "#ddd",
-    block: "rgba(140,140,140,0.85)",
-    blockS: "#222",
-    map: "#444",
-    bullet: "#000"
+    background: themeColors.backgroundColor,
+    block: themeColors.block,
+    blockS: themeColors.blockS,
+    map: themeColors.mapColor,
+    bullet: "#808080" // themeColors.bulletColor
 }
 
 // const color = { //dark
@@ -235,7 +235,7 @@ const build = {
         let text = `<div class="pause-grid-module" style = "font-size: 13px;line-height: 120%;padding: 5px;">`
         if (!simulation.isChoosing) text += `<br><span style="font-size:1.5em;font-weight: 600;">PAUSED</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Press P To Resume
 <br><br><svg class="SVG-button" onclick="build.shareURL(false)" width="92" height="20" style="padding:0px; margin: 1px;">
-    <g stroke='none' fill='#333' stroke-width="2" font-size="14px" font-family="Ariel, sans-serif"> <text x="5" y="15">Copy Build Url</text></g>
+    <g stroke='none' fill='#808080' stroke-width="2" font-size="14px" font-family="Ariel, sans-serif"> <text x="5" y="15">Copy Build Url</text></g>
 </svg><br>`
         text += `
 <br>Effective <strong class='color-d'>Damage</strong>: ${(tech.damageFromTech() * m.dmgScale).toPrecision(4)}
@@ -456,17 +456,17 @@ ${simulation.isCheating ? "<br><br><em>Lore Disabled</em>": ""}
         let text = `
   <div style="display: flex; justify-content: space-around; align-items: center;">
     <svg class="SVG-button" onclick="build.startExperiment()" width="115" height="51">
-      <g stroke='none' fill='#333' stroke-width="2" font-size="40px" font-family="Ariel, sans-serif">
+      <g stroke='none' fill='#808080' stroke-width="2" font-size="40px" font-family="Ariel, sans-serif">
         <text x="18" y="38">Start</text>
       </g>
     </svg>
     <svg class="SVG-button" onclick="build.reset()" width="50" height="25">
-      <g stroke='none' fill='#333' stroke-width="2" font-size="17px" font-family="Ariel, sans-serif">
+      <g stroke='none' fill='#808080' stroke-width="2" font-size="17px" font-family="Ariel, sans-serif">
         <text x="5" y="18">Reset</text>
       </g>
     </svg>
     <svg class="SVG-button" onclick="build.shareURL(true)" width="52" height="25">
-      <g stroke='none' fill='#333' stroke-width="2" font-size="17px" font-family="Ariel, sans-serif">
+      <g stroke='none' fill='#808080' stroke-width="2" font-size="17px" font-family="Ariel, sans-serif">
         <text x="5" y="18">Share</text>
       </g>
     </svg>
@@ -750,7 +750,7 @@ const input = {
     },
     focus: null,
     setTextFocus() {
-        const backgroundColor = "#fff"
+        const backgroundColor = themeColors.controlColor
         document.getElementById("key-fire").style.background = backgroundColor
         document.getElementById("key-field").style.background = backgroundColor
         document.getElementById("key-up").style.background = backgroundColor
