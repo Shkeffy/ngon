@@ -21,8 +21,8 @@ Please star and watch this repo!
 # Links:
 [OWW] = Offline Working Website
 - [NORMAL WEBSITE](https://shkeffy.github.io/ngon/)
-- [OWW](https://www.ngon.cf) - Broken. Fixing right now.
-- [OWW](https://ngon.shkeffy.repl.co) - Broken. Fixing right now.
+- [OWW](https://www.ngon.cf)
+- [OWW](https://ngon.shkeffy.repl.co)
 
 ### I *am* looking for help with N-GON. Contact me for more details
 - Discord - Shkeffy#9999 (Not online often).
