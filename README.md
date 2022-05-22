@@ -36,4 +36,4 @@ Please star and watch this repo!
   - A reference.
   - Some code you can write.
 - Payment will be discussed based on skills.
-<br>Thank you!
+#### Thank you!
