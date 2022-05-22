@@ -42,7 +42,7 @@ const level = {
             // level.temple();
             // level.testing(); //not in rotation, used for testing
             // spawn.slashBoss(1900, -500)
-
+          
             if (simulation.isTraining) { level.walk(); } else { level.intro(); } //normal starting level ************************************************
             // powerUps.research.changeRerolls(3000)
             // for (let i = 0; i < 30; i++) powerUps.spawn(player.position.x + Math.random() * 50, player.position.y - Math.random() * 50, "tech", false);
@@ -1434,7 +1434,7 @@ const level = {
         level.isProcedural = true //used in generating text itn he level builder
         level.defaultZoom = 1700
         simulation.zoomTransition(level.defaultZoom)
-        document.body.style.backgroundColor = "#d9d9de" //"#d3d3db" //"#dcdcdf";
+        document.body.style.backgroundColor = themeColors.labsBackground //"#d3d3db" //"#dcdcdf";
         let isDoorLeft, isDoorRight, x, y
         doCustom = []
         doCustomTopLayer = []
@@ -3156,7 +3156,7 @@ const level = {
             // ctx.fillRect(2000, -1000, 80, 700)
 
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(2600, -600, 400, 300)
 
             // level.enter.draw();
@@ -3367,7 +3367,7 @@ const level = {
                 ctx.fillRect(275, -1925, 825, 2925) //large pillar background
                 ctx.fillRect(-1275, -1925, 825, 2925) //large pillar background
 
-                ctx.fillStyle = "#cff" //exit
+                ctx.fillStyle = themeColors.exit //exit
                 ctx.fillRect(-2000, -4900, 525, 425)
                 level.exit.drawAndCheck();
 
@@ -3483,7 +3483,7 @@ const level = {
                 ctx.fillStyle = "#d0d4d6"
                 ctx.fillRect(-1100, -1925, 825, 2925) //large pillar background
                 ctx.fillRect(450, -1925, 825, 2925) //large pillar background
-                ctx.fillStyle = "#cff" //exit
+                ctx.fillStyle = themeColors.exit //exit
                 ctx.fillRect(1475, -4900, 525, 425)
                 level.exit.drawAndCheck();
 
@@ -3644,7 +3644,7 @@ const level = {
                 ctx.fillRect(-2500, -1800, 3575, 2100);
                 ctx.fillStyle = "#c0c3c9"
                 ctx.fillRect(-2075, -1475, 25, 1800);
-                ctx.fillStyle = "#cff" //exit
+                ctx.fillStyle = themeColors.exit //exit
                 ctx.fillRect(550, -1800, 525, 350)
 
                 level.exit.drawAndCheck();
@@ -3668,7 +3668,7 @@ const level = {
                 ctx.fillRect(-1075, -1800, 3575, 2100);
                 ctx.fillStyle = "#c0c3c9"
                 ctx.fillRect(2050, -1475, 25, 1800);
-                ctx.fillStyle = "#cff" //exit
+                ctx.fillStyle = themeColors.exit //exit
                 ctx.fillRect(-1050, -1800, 525, 350)
 
                 level.exit.drawAndCheck();
@@ -4315,7 +4315,7 @@ const level = {
             elevator.move();
             elevator.drawTrack();
 
-            ctx.fillStyle = "#d4f4f4"
+            ctx.fillStyle = themeColors.rooftopsBackground
             if (isBackwards) {
                 ctx.fillRect(-650, -2300, 440, 300)
             } else {
@@ -4728,9 +4728,9 @@ const level = {
             boost1.query();
             boost2.query();
 
-            ctx.fillStyle = "#d4f4f4"
+            ctx.fillStyle = themeColors.skyscrapersBackground
             ctx.fillRect(1350, -2100, 400, 250)
-            ctx.fillStyle = "#d4d4d7"
+            ctx.fillStyle = themeColors.skyscrapersBackground
             ctx.fillRect(3350, -1300, 50, 1325)
             ctx.fillRect(1300, -1800, 750, 1800)
 
@@ -4883,7 +4883,7 @@ const level = {
             // ctx.fillRect(-2475, -2450, 25, 750)
             // ctx.fillRect(-2975, -2750, 25, 600)
             // ctx.fillRect(-3375, -2875, 25, 725)
-            ctx.fillStyle = "#cff" //exit
+            ctx.fillStyle = themeColors.exit //exit
             ctx.fillRect(-4425, -3050, 425, 275)
             level.exit.drawAndCheck();
 
@@ -5084,7 +5084,7 @@ const level = {
             elevator2.addConstraint();
 
             level.custom = () => {
-                ctx.fillStyle = "#cff" //exit
+                ctx.fillStyle = themeColors.exit //exit
                 ctx.fillRect(4425 - 425, -3050, 425, 275)
                 level.exit.drawAndCheck();
 
@@ -5149,14 +5149,14 @@ const level = {
     },
     warehouse() {
         level.custom = () => {
-            ctx.fillStyle = "#444" //light fixtures
+            ctx.fillStyle = themeColors.lightsColor //light fixtures
             ctx.fillRect(-920, -505, 40, 10)
             ctx.fillRect(-920, 95, 40, 10)
             ctx.fillRect(180, 95, 40, 10)
             ctx.fillRect(-20, 695, 40, 10)
             ctx.fillRect(-2320, 945, 40, 10)
 
-            ctx.fillStyle = "#cff" //exit
+            ctx.fillStyle = themeColors.exit //exit
             ctx.fillRect(300, -250, 350, 250)
             level.exit.drawAndCheck();
 
@@ -5270,14 +5270,14 @@ const level = {
                 elevator3.move();
                 elevator3.drawTrack();
 
-                ctx.fillStyle = "#444" //light fixtures
+                ctx.fillStyle = themeColors.lightsColor //light fixtures
                 ctx.fillRect(-920, -505, 40, 10)
                 ctx.fillRect(-920, 95, 40, 10)
                 ctx.fillRect(180, 95, 40, 10)
                 ctx.fillRect(-20, 695, 40, 10)
                 ctx.fillRect(-2320, 945, 40, 10)
 
-                ctx.fillStyle = "#cff" //exit
+                ctx.fillStyle = themeColors.exit //exit
                 ctx.fillRect(300, -250, 350, 250)
                 level.exit.drawAndCheck();
 
@@ -5396,14 +5396,14 @@ const level = {
                     elevator3.move();
                     elevator3.drawTrack();
 
-                    ctx.fillStyle = "#444" //light fixtures
+                    ctx.fillStyle = themeColors.lightsColor //light fixtures
                     ctx.fillRect(920 - 40, -505, 40, 10)
                     ctx.fillRect(920 - 40, 95, 40, 10)
                     ctx.fillRect(-180 - 40, 95, 40, 10)
                     ctx.fillRect(20 - 40, 695, 40, 10)
                     ctx.fillRect(2320 - 40, 945, 40, 10)
 
-                    ctx.fillStyle = "#cff" //exit
+                    ctx.fillStyle = themeColors.exit //exit
                     ctx.fillRect(-300 - 350, -250, 350, 250)
                     level.exit.drawAndCheck();
 
@@ -5411,14 +5411,14 @@ const level = {
                 };
             } else {
                 level.custom = () => {
-                    ctx.fillStyle = "#444" //light fixtures
+                    ctx.fillStyle = themeColors.lightsColor //light fixtures
                     ctx.fillRect(920 - 40, -505, 40, 10)
                     ctx.fillRect(920 - 40, 95, 40, 10)
                     ctx.fillRect(-180 - 40, 95, 40, 10)
                     ctx.fillRect(20 - 40, 695, 40, 10)
                     ctx.fillRect(2320 - 40, 945, 40, 10)
 
-                    ctx.fillStyle = "#cff" //exit
+                    ctx.fillStyle = themeColors.exit //exit
                     ctx.fillRect(-300 - 350, -250, 350, 250)
                     level.exit.drawAndCheck();
 
@@ -7888,7 +7888,7 @@ const level = {
             for (let i = 0; i < needGravity.length; i++) {
                 needGravity[i].force.y += needGravity[i].mass * simulation.g;
             }
-            ctx.fillStyle = "#444" //light fixtures
+            ctx.fillStyle = themeColors.lightsColor //light fixtures
             ctx.fillRect(2350, 995, 40, 10)
             //ctx.fillRect(2280, -6005, 40, 10)
 
@@ -10854,7 +10854,7 @@ const level = {
                 <br>exit through the blue door`)
             }
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(1600, -400, 400, 400)
 
             level.enter.draw();
@@ -10910,7 +10910,7 @@ const level = {
                 level.trainingText(`<s>press <strong class="key-input-train">${input.key.down.replace('Key', '').replace('Digit', '')}</strong> to crouch</s>`)
             }
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(1625, -350, 375, 350)
 
             level.enter.draw();
@@ -10968,7 +10968,7 @@ const level = {
             }
             m.health = 1 //can't die
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(1600, -400, 400, 400)
 
             level.enter.draw();
@@ -11042,7 +11042,7 @@ const level = {
                 level.trainingText(`<s>activate your <strong class='color-f'>field</strong> with <strong class="key-input-train">${input.key.field.replace('Key', '').replace('Digit', '')}</strong> or <strong>right mouse</strong><br>release your <strong class='color-f'>field</strong> on a <strong class='color-block'>block</strong> to pick it up<br>drop the <strong class='color-block'>block</strong> on the red button to open the door</s>`)
             }
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(1600, -400, 400, 400)
 
             level.enter.draw();
@@ -11117,7 +11117,7 @@ const level = {
                 <br>throw the <strong class='color-block'>block</strong> onto the button</s>`)
             }
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(1600, -400, 400, 400)
 
             level.enter.draw();
@@ -11179,7 +11179,7 @@ const level = {
                 level.trainingText(`<s>throw the <strong class='color-block'>block</strong> at the <strong>mobs</strong> to open the door</s>`)
             }
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(1600, -400, 400, 400)
 
             level.enter.draw();
@@ -11270,7 +11270,7 @@ const level = {
             }
 
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(1600, -350, 400, 400)
 
             level.enter.draw();
@@ -11352,7 +11352,7 @@ const level = {
                 who.timeLeft = 300
             }
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(1600, -400, 400, 400)
 
             level.enter.draw();
@@ -11415,7 +11415,7 @@ const level = {
                 level.trainingText(`<s>use your <strong class='color-f'>field</strong> to pick up <div class="heal-circle" style = "border: none;"></div> until your <strong>health</strong> is full</s>`)
             }
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(1600, -400, 400, 400)
 
             level.enter.draw();
@@ -11495,7 +11495,7 @@ const level = {
             }
 
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(1600, -400, 400, 400)
 
             level.enter.draw();
@@ -11581,7 +11581,7 @@ const level = {
             }
 
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(1600, -400, 400, 400)
 
             level.enter.draw();
@@ -11663,7 +11663,7 @@ const level = {
             }
 
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(1600, -400, 400, 400)
 
             level.enter.draw();
@@ -11747,7 +11747,7 @@ const level = {
             }
 
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(1600, -400, 400, 400)
 
             level.enter.draw();
@@ -11835,7 +11835,7 @@ const level = {
             }
 
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(1600, -400, 400, 400)
 
             level.enter.draw();
@@ -11910,7 +11910,7 @@ const level = {
             }
 
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(1600, -1050, 400, 400)
 
             level.enter.draw();
@@ -11981,7 +11981,7 @@ const level = {
                 powerUps.directSpawn(1301, -2200, "ammo", false);
             }
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(1600, -1050, 400, 400)
 
             level.enter.draw();
@@ -12059,7 +12059,7 @@ const level = {
                 level.trainingText(`<s>flip the <strong>switch</strong> to turn on the <strong>elevator</strong><br>put a <strong class='color-block'>block</strong> on the <strong>button</strong> to active the <strong>elevator</strong><br>hold <strong>jump</strong> before the <strong>elevator's</strong> <strong>apex</strong> to reach the <strong>exit</strong></s>`)
             }
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(1725, -3100, 375, 300);
 
             level.enter.draw();
@@ -12160,7 +12160,7 @@ const level = {
                 level.trainingText(`<s>climb up to the exit</s>`)
             }
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(1725, -3100, 375, 300);
 
             level.enter.draw();
@@ -12254,7 +12254,7 @@ const level = {
                 level.trainingText(`<s>press <strong class="key-input-train">${input.key.down.replace('Key', '').replace('Digit', '')}</strong> to crouch</s>`)
             }
             //exit room
-            ctx.fillStyle = "#f2f2f2"
+            ctx.fillStyle = themeColors.exit
             ctx.fillRect(1600, -400, 400, 400)
 
             level.enter.draw();
