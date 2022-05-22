@@ -35,5 +35,4 @@ Please star and watch this repo!
   - A project you've made.
   - A reference.
   - Some code you can write.
-- Payment will be discussed based on skills.
 #### Thank you!
