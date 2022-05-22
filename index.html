@@ -12,7 +12,7 @@
     <meta name="twitter:title" content="N-GON">
     <meta name="twitter:description" content="Browser-based side scrolling video game with the matter.js physics engine.">
     <title>N-GON</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Color modes are in colors.js <link rel="stylesheet" href="style.css"> -->
     <link rel='shortcut icon' href='favicon.ico?' type='image/x-icon' />
   
 </head>
@@ -38,7 +38,7 @@
         <div id="pause-grid-right" class="pause-grid"></div>
     </div>
     <svg class="SVG-button" id="experiment-button" width="170" height="45" style="border: 2px #333 solid;">
-        <g stroke='none' fill='#333' stroke-width="2" font-size="30px" font-family="Arial, sans-serif">
+        <g stroke='none' fill='#808080' stroke-width="2" font-size="30px" font-family="Arial, sans-serif">
             <text x="10" y="33">Experiment</text>
         </g>
     </svg>
@@ -96,6 +96,9 @@
                         <option value="45">45 FPS</option>
                         <option value="30">30 FPS</option>
                     </select>
+                    <br>
+                    <label for="colors" title="">Dark Mode:</label>
+                    <input type="checkbox" id="colors" name="colors" style="width:17px; height:17px;" onclick="useTheme(this)">
                 </div>
             </details>
         </div>
@@ -117,7 +120,7 @@
                         <tr>
                             <th>FIELD</th>
                             <td id='key-field' class='key-input'>SPACE</td>
-                            <td class='key-used'>MRight Mouse</td>
+                            <td class='key-used'>Right Mouse</td>
                         </tr>
                         <tr>
                             <th>JUMP</th>
@@ -176,14 +179,14 @@
                 <div class="details-div" style="max-width: 450px;">
                   
                     </a>                    <a href="https://github.com/shkeffy/ngon">
-                        <svg viewBox="0 0 100 16" xmlns="http://www.w3.org/2000/svg" fill="#1B1F23">
+                        <svg viewBox="0 0 100 16" xmlns="http://www.w3.org/2000/svg" fill="#808080">
                             <path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" />
                             <g stroke='none' font-size="8px" font-family="Arial Black, sans-serif">
                                 <text x="19" y="11">Github</text>
                             </g>
                         </svg>
                     </a>
-                    <a href="https://github.com/shkeffy/ngon">Github</a> hosts N-GON's 2.5MB source code.<br>It's written in JavaScript, CSS, and HTML and uses the matter.js 2-D physics library. N-GON is a game where you can get powerups and shields, you have health and energy, you can run, fly, and even teleport! It is written in Replit. To use N-GON offline (The good way), go to the GitHub page, information is there.
+                    <a href="https://github.com/shkeffy/ngon">Github</a> hosts N-GON's 2.5MB source code.<br>It's written in JavaScript, CSS, and HTML and uses the matter.js 2-D physics library. N-GON is a game where you can get powerups and shields, you have health and energy, you can run, fly, and even teleport! It is written in Replit. To use N-GON offline (The good way), go to the GitHub page, information is there. To update N-GON, clear your cache of N-GON's cookies, and reset the page.
                 </div>
             </details>
         </div>
@@ -341,6 +344,7 @@
             <text x="599" y="438">Field</text>
         </g>
     </svg>
+    <script src="js/colors.js"></script>
     <script src='lib/matter.min.js'></script>
     <script src='lib/decomp.min.js'></script>
     <script src='lib/randomColor.min.js'></script>
@@ -351,10 +355,10 @@
     <script src="js/bullet.js"></script>
     <script src="js/mob.js"></script>
     <script src="js/spawn.js"></script>
-    <script src="js/level.js"></script>
     <script src="js/lore.js"></script>
     <script src="js/engine.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/level.js"></script>
     <!-- Start of Woopra Web Tracking Code -->
     <script>
       !function(){var t,o,c,e=window,n=document,r=arguments,a="script",i=["call","cancelAction","config","identify","push","track","trackClick","trackForm","update","visit"],s=function(){var t,o=this,c=function(t){o[t]=function(){return o._e.push([t].concat(Array.prototype.slice.call(arguments,0))),o}};for(o._e=[],t=0;t<i.length;t++)c(i[t])};for(e.__woo=e.__woo||{},t=0;t<r.length;t++)e.__woo[r[t]]=e[r[t]]=e[r[t]]||new s;(o=n.createElement(a)).async=1,o.src="https://static.woopra.com/js/w.js",(c=n.getElementsByTagName(a)[0]).parentNode.insertBefore(o,c)}("woopra");
