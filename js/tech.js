@@ -8778,7 +8778,7 @@ const tech = {
         },
         {
             name: "pop-ups",
-            description: "sign up to learn endless easy ways to win n-gon<br>that Shkeffy doesn't want you to know!!!1!!",
+            description: "sign up to learn endless easy ways to win n-gon<br>that Landgreen doesn't want you to know!!!1!!",
             maxCount: 1,
             count: 0,
             frequency: 0,
