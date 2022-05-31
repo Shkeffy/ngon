@@ -187,7 +187,7 @@ window.addEventListener('load', () => {
 const canvas = document.getElementById("canvas");
 //using "const" causes problems in safari when an ID shares the same name.
 const ctx = canvas.getContext("2d");
-// const ctx = canvas.getContext('2d', { alpha: false });  //optimization, but doesn't work
+// const ctx = canvas.getContext('2d', { alpha: false });  //optimization, this works if you wipe with the background color of each level
 
 document.body.style.backgroundColor = "#fff";
 
