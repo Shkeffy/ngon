@@ -2752,19 +2752,23 @@ const level = {
                 for (let i = 0; i < 9; ++i) powerUps.spawn(1200 + 550 * Math.random(), -1700, "ammo")
                 for (let i = 0; i < 3; ++i) powerUps.spawn(1200 + 550 * Math.random(), -1700, "heal");
                 const scale = Math.pow(simulation.difficulty, 0.73) //hard around 30, why around 54
-                if (Math.random() < 0.07 && simulation.difficulty > 22) {
-                    for (let i = 0, len = scale * 0.1 / 3; i < len; ++i) spawn.bounceBoss(1487 + 200 * i, -1525, 80, false);
-                    for (let i = 0, len = scale * 0.17 / 3; i < len; ++i) spawn.sprayBoss(1487 + 200 * i, -1525, 30, false)
-                    for (let i = 0, len = scale * 0.23 / 3; i < len; ++i) spawn.mineBoss(1487 + 200 * i, -1525, 50, false);
-                } else {
-                    if (Math.random() < 0.33) {
-                        for (let i = 0, len = scale * 0.1; i < len; ++i) spawn.bounceBoss(1487 + 200 * i, -1525, 80, false); //spawn 1-2 at difficulty 15 
-                    } else if (Math.random() < 0.5) {
-                        for (let i = 0, len = scale * 0.16; i < len; ++i) spawn.sprayBoss(1487 + 200 * i, -1525, 30, false) //spawn 2-3 at difficulty 15 
-                    } else {
-                        for (let i = 0, len = scale * 0.23; i < len; ++i) spawn.mineBoss(1487 + 200 * i, -1525, 50, false); //spawn 3-4 at difficulty 15 
-                    }
-                }
+                for (let i = 0, len = scale * 0.23; i < len; ++i) spawn.mineBoss(1487 + 200 * i, -1525, 50, false); //spawn 3-4 at difficulty 15 
+                        // if (Math.random() < 0.07 && simulation.difficulty > 24) {
+                        //     for (let i = 0, len = scale * 0.25 / 4; i < len; ++i) spawn.timeBoss(1487 + 200 * i, -1525, 60, false); //spawn 1-2 at difficulty 15 
+                        //     for (let i = 0, len = scale * 0.1 / 4; i < len; ++i) spawn.bounceBoss(1487 + 200 * i, -1525, 80, false);
+                        //     for (let i = 0, len = scale * 0.16 / 4; i < len; ++i) spawn.sprayBoss(1487 + 200 * i, -1525, 30, false)
+                        //     for (let i = 0, len = scale * 0.23 / 4; i < len; ++i) spawn.mineBoss(1487 + 200 * i, -1525, 50, false);
+                        // } else {
+                        //     if (Math.random() < 0.25) {
+                        //         for (let i = 0, len = scale * 0.25; i < len; ++i) spawn.timeBoss(1487 + 200 * i, -1525, 80, false); //spawn 1-2 at difficulty 15 
+                        //     } else if (Math.random() < 0.33) {
+                        //         for (let i = 0, len = scale * 0.1; i < len; ++i) spawn.bounceBoss(1487 + 200 * i, -1525, 80, false); //spawn 1-2 at difficulty 15 
+                        //     } else if (Math.random() < 0.5) {
+                        //         for (let i = 0, len = scale * 0.16; i < len; ++i) spawn.sprayBoss(1487 + 200 * i, -1525, 30, false) //spawn 2-3 at difficulty 15 
+                        //     } else {
+                        //         for (let i = 0, len = scale * 0.23; i < len; ++i) spawn.mineBoss(1487 + 200 * i, -1525, 50, false); //spawn 3-4 at difficulty 15 
+                        //     }
+                        // }
                 spawn.secondaryBossChance(2200, -800)
             } else if (!isFightOver && !(simulation.cycle % 120)) { //once a second look for any bosses
                 let isFoundBoss = false
@@ -4761,9 +4765,6 @@ const level = {
         powerUps.spawnStartingPowerUps(1475, -1175);
         spawn.debris(750, -2200, 3700, 16); //16 debris per level
         document.body.style.backgroundColor = "#dcdcde";
-        // simulation.draw.mapFill = "#444"
-        // simulation.draw.bodyFill = "rgba(140,140,140,0.85)"
-        // simulation.draw.bodyStroke = "#222"
         spawn.mapRect(-300, 0, 5100, 300); //***********ground
         spawn.mapRect(-300, -350, 50, 400); //far left starting left wall
         spawn.mapRect(-300, -10, 500, 50); //far left starting ground
@@ -4828,9 +4829,9 @@ const level = {
         spawn.randomMob(-100, -1700, -0.2);
         spawn.randomGroup(3700, -1500, 0.4);
         spawn.randomGroup(1700, -900, 0.4);
-        if (simulation.difficulty > 1) spawn.randomLevelBoss(2600, -2300);
+        if (simulation.difficulty > 1) spawn.randomLevelBoss(2800 + 200 * Math.random(), -2200 + 200 * Math.random());
         powerUps.addResearchToLevel() //needs to run after mobs are spawned
-        spawn.secondaryBossChance(3075, -2050)
+        spawn.secondaryBossChance(4000, -1825)
 
         if (simulation.isHorizontalFlipped) { //flip the map horizontally
             level.flipHorizontal(); //only flips map,body,mob,powerUp,cons,consBB, exit
