@@ -89,15 +89,32 @@ const simulation = {
                 m.airControl()
             }
             m.move();
+            level.custom();
             simulation.checks();
             mobs.loop();
-            // m.draw();
             m.walk_cycle += m.flipLegs * m.Vx;
-
             m.hold();
+            level.customTopLayer();
             b.fire();
             b.bulletRemove();
             b.bulletDo();
+        }
+        simulation.isTimeSkipping = false;
+    },
+    timePlayerSkip(cycles = 60) {
+        simulation.isTimeSkipping = true;
+        for (let i = 0; i < cycles; i++) {
+            simulation.cycle++;
+            simulation.gravity();
+            Engine.update(engine, simulation.delta);
+            // level.custom();
+            // level.customTopLayer();
+            if (!m.isBodiesAsleep) {
+                simulation.checks();
+                mobs.loop();
+            }
+            b.bulletRemove();
+            if (!m.isBodiesAsleep) b.bulletDo();
         }
         simulation.isTimeSkipping = false;
     },
@@ -237,7 +254,7 @@ const simulation = {
         ctx.moveTo(simulation.mouse.x, simulation.mouse.y - size);
         ctx.lineTo(simulation.mouse.x, simulation.mouse.y + size);
         ctx.lineWidth = 2;
-        ctx.strokeStyle = themeColors.cursorColor; //'rgba(0,0,0,0.4)'
+        ctx.strokeStyle = "#000"; //'rgba(0,0,0,0.4)'
         ctx.stroke(); // Draw it
     },
     drawList: [], //so you can draw a first frame of explosions.. I know this is bad
@@ -355,7 +372,7 @@ const simulation = {
     isTextLogOpen: true,
     // <!-- <path d="M832.41,106.64 V323.55 H651.57 V256.64 c0-82.5,67.5-150,150-150 Z" fill="#789" stroke="none" />
     // <path d="M827,112 h30 a140,140,0,0,1,140,140 v68 h-167 z" fill="#7ce" stroke="none" /> -->
-    // SVGleftMouse: '<svg viewBox="750 0 200 765" class="mouse-icon" width="40px" height = "60px" stroke-linecap="round" stroke-linejoin="round" stroke-width="25px" stroke="000" fill="none">  <path fill="#fff" stroke="none" d="M827,112 h30 a140,140,0,0,1,140,140 v268 a140,140,0,0,1-140,140 h-60 a140,140,0,0,1-140-140v-268 a140,140,0,0,1,140-140h60" />  <path d="M832.41,106.64 V323.55 H651.57 V256.64 c0-82.5,67.5-150,150-150 Z" fill="#149" stroke="none" />  <path fill="none" d="M827,112 h30 a140,140,0,0,1,140,140 v268 a140,140,0,0,1-140,140 h-60 a140,140,0,0,1-140-140v-268 a140,140,0,0,1,140-140h60" />  <path d="M657 317 h 340 h-170 v-207" />  <ellipse fill="#fff" cx="827.57" cy="218.64" rx="29" ry="68" />  </svg>',
+    // SVGleftMouse: '<svg viewBox="750 0 200 765" class="mouse-icon" width="40px" height = "60px" stroke-linecap="round" stroke-linejoin="round" stroke-width="25px" stroke="#000" fill="none">  <path fill="#fff" stroke="none" d="M827,112 h30 a140,140,0,0,1,140,140 v268 a140,140,0,0,1-140,140 h-60 a140,140,0,0,1-140-140v-268 a140,140,0,0,1,140-140h60" />  <path d="M832.41,106.64 V323.55 H651.57 V256.64 c0-82.5,67.5-150,150-150 Z" fill="#149" stroke="none" />  <path fill="none" d="M827,112 h30 a140,140,0,0,1,140,140 v268 a140,140,0,0,1-140,140 h-60 a140,140,0,0,1-140-140v-268 a140,140,0,0,1,140-140h60" />  <path d="M657 317 h 340 h-170 v-207" />  <ellipse fill="#fff" cx="827.57" cy="218.64" rx="29" ry="68" />  </svg>',
     // SVGrightMouse: '<svg viewBox="750 0 200 765" class="mouse-icon" width="40px" height = "60px" stroke-linecap="round" stroke-linejoin="round" stroke-width="25px" stroke="#000" fill="none">  <path fill="#fff" stroke="none" d="M827,112 h30 a140,140,0,0,1,140,140 v268 a140,140,0,0,1-140,140 h-60 a140,140,0,0,1-140-140v-268 a140,140,0,0,1,140-140h60" />  <path d="M827,112 h30 a140,140,0,0,1,140,140 v68 h-167 z" fill="#0cf" stroke="none" />  <path fill="none" d="M827,112 h30 a140,140,0,0,1,140,140 v268 a140,140,0,0,1-140,140 h-60 a140,140,0,0,1-140-140v-268 a140,140,0,0,1,140-140h60" />  <path d="M657 317 h 340 h-170 v-207" />  <ellipse fill="#fff" cx="827.57" cy="218.64" rx="29" ry="68" />  </svg>',
     makeTextLog(text, time = 240) {
         if (simulation.isTextLogOpen && !build.isExperimentSelection) {
@@ -520,7 +537,7 @@ const simulation = {
     firstRun: true,
     splashReturn() {
 
-        document.getElementById("previous-seed").innerHTML = `Previous Seed: <span style="font-size:80%;">${Math.initialSeed}</span><br>`
+        document.getElementById("previous-seed").innerHTML = `previous seed: <span style="font-size:80%;">${Math.initialSeed}</span><br>`
         document.getElementById("seed").value = Math.initialSeed = Math.seed //randomize initial seed
 
         //String(document.getElementById("seed").value)
@@ -708,7 +725,7 @@ const simulation = {
         simulation.clearNow = true;
         document.getElementById("text-log").style.opacity = 0;
         document.getElementById("fade-out").style.opacity = 0;
-        document.title = "N-GON";
+        document.title = "n-gon";
         // simulation.makeTextLog(`input.key.up<span class='color-symbol'>:</span> ["<span class='color-text'>${input.key.up}</span>", "<span class='color-text'>ArrowUp</span>"]`);
         // simulation.makeTextLog(`input.key.left<span class='color-symbol'>:</span> ["<span class='color-text'>${input.key.left}</span>", "<span class='color-text'>ArrowLeft</span>"]`);
         // simulation.makeTextLog(`input.key.down<span class='color-symbol'>:</span> ["<span class='color-text'>${input.key.down}</span>", "<span class='color-text'>ArrowDown</span>"]`);
@@ -831,7 +848,6 @@ const simulation = {
         m.fireCDcycle = 0
         m.drop();
         m.hole.isOn = false;
-        level.zones = [];
         simulation.drawList = [];
 
         if (tech.isDronesTravel && m.alive) {
